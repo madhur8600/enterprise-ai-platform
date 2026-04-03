@@ -28,27 +28,5 @@ It simulates **real-world enterprise AI infrastructure** used in industries such
 # 🧠 System Architecture
 
 Below is the high-level architecture of the RAG pipeline:
-flowchart TD
 
-A[User Query] --> B[FastAPI API]
-
-B --> C[Retriever]
-
-C --> D[Local Embedder]
-
-D --> E[FAISS Vector Store]
-
-E --> F[Top-K Retrieval]
-
-F --> G[Generator]
-
-G --> H[Response Returned to User]
-
-subgraph Storage
-I[Raw Documents]
-J[Vector Store Disk Persistence]
-end
-
-I --> C
-E --> J
 
